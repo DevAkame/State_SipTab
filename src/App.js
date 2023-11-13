@@ -1,5 +1,12 @@
 import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { Amplify, Auth, Hub } from 'aws-amplify';
+import { withAuthenticator, useAuthenticator, Flex } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
+
 
 function App() {
   return (
@@ -22,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
