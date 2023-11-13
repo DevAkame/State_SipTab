@@ -1,8 +1,8 @@
 import logo from './logo.svg';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
-import { Amplify, Auth, Hub } from 'aws-amplify';
-import { withAuthenticator, useAuthenticator, Flex } from '@aws-amplify/ui-react';
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
 Amplify.configure(awsExports);
